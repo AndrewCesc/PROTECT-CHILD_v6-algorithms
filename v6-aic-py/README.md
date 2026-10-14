@@ -11,7 +11,7 @@ require the existing classification-metrics library.
 
 ## Statistical definition
 
-\`AIC = 2*k - 2*sum(log_likelihood_local)\`
+`AIC = 2*k - 2*sum(log_likelihood_local)`
 
 - **k / n_parameters**: the number of independently estimated free parameters
   of the same global model, including intercepts and any estimated dispersion
