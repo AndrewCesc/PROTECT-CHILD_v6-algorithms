@@ -11,7 +11,7 @@ require the existing classification-metrics library.
 
 ## Statistical definition
 
-\`BIC = 2*k - 2*sum(log_likelihood_local)\`
+`BIC = log(sum(n_local))*k - 2*sum(log_likelihood_local)`
 
 - **k / n_parameters**: the number of independently estimated free parameters
   of the same global model, including intercepts and any estimated dispersion
@@ -20,10 +20,10 @@ require the existing classification-metrics library.
   appropriately defined observational units for the model); obtained by
   summing the local counts, not guessed from the number of organizations.
 - **log-likelihood**: the same **full** likelihood definition and the same
-  globally fitted parameters at every organization. For classical BIC/BIC,
+  globally fitted parameters at every organization. For classical AIC/BIC,
   use the likelihood **maximized** for each candidate model. Inputs from an
-  arbitrary fixed/prediction-only model can be scored algebrbically but are
-  **not automatically a valid classical BIC/BIC comparison**.
+  arbitrary fixed/prediction-only model can be scored algebraically but are
+  **not automatically a valid classical AIC/BIC comparison**.
 - Scores from different models are comparable only when likelihood
   conventions, target observations and candidate-model assumptions match.
 - Results are exact apart from floating-point arithmetic **if input
